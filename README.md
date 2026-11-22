@@ -24,7 +24,7 @@ Follow these steps to get your FNLB cluster up and running:
 Download or clone the FNLB self-hosting project to your local machine:
 
 ```bash
-git clone https://github.com/Fortnite-LobbyBot/Self-Hosted.git
+git clone https://github.com/FNLB-Project/Self-Hosted.git
 cd Self-Hosted
 ```
 
@@ -186,8 +186,8 @@ Run FNLB in a container using the multi-stage `Dockerfile`.
 Official images are published to GitHub Container Registry on pushes to the `stable` branch:
 
 ```bash
-docker pull ghcr.io/fortnite-lobbybot/self-hosted:latest
-docker run -d --name fnlb --env-file .env --restart unless-stopped ghcr.io/fortnite-lobbybot/self-hosted:latest
+docker pull ghcr.io/fnlb-project/self-hosted:latest
+docker run -d --name fnlb --env-file .env --restart unless-stopped ghcr.io/fnlb-project/self-hosted:latest
 ```
 
 ### Docker Compose

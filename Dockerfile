@@ -3,9 +3,9 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 
-COPY bun.lock package.json ./
+COPY bun.lock package.json .npmrc ./
 
-RUN bun install --production --frozen-lockfile --ignore-scripts
+RUN --mount=type=secret,id=npm_token NODE_AUTH_TOKEN="$(cat /run/secrets/npm_token)" bun install --production --frozen-lockfile --ignore-scripts
 
 COPY src ./src
 
