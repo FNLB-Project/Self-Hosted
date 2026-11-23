@@ -1,0 +1,6 @@
+# Findings in the Go standard library come from Go-built tool binaries bundled in node_modules or the base image
+# (none of our services is written in Go). Scoped to Go stdlib so everything else still gates the build.
+ignore:
+  - package:
+      type: go-module
+      name: stdlib
